@@ -164,8 +164,9 @@ if __name__ == '__main__':
     label_length[:] = 7
 
     model.fit([data,label,input_length,label_length],
-              batch_size = 2000,
-              epochs=200,
+              label,
+              batch_size = 2,
+              epochs=3,
               callbacks=[history],
               verbose=0
               )
